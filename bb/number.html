@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number</title>
+</head>
+<body>
+<h2>nhập số</h2>
+<label><input type="text" id="number"></label>
+<button onclick="check()">check</button>
+<p id="result"></p>
+</body>
+<script>
+    function check() {
+        let n = document.getElementById("number").value;
+        let result="";
+        for (let i = 0; i < n.length; i++) {
+            if (parseInt(n[i]) % 2 === 0) {
+                result +="-"+ n[i];
+            }
+        else {
+            result += n[i];
+        }
+        }
+        document.getElementById('result').innerHTML = result;
+    }
+</script>
+</html>
